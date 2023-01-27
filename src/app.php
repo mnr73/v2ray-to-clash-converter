@@ -24,7 +24,7 @@ if(@$_POST['proxies']){
 </head>
 <body>
 	<div class="body">
-		<h1>rate us in github <a href="https://github.com/mnr73/laravel-docker">mnr73</a></h1>
+		<h1>rate us in github <a href="https://github.com/mnr73/v2ray-to-clash-converter">mnr73/v2ray-to-clash-converter</a></h1>
 		<hr>
 		<form method="post">
 			<label for="">paste your proxies here</label>
