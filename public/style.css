@@ -1,0 +1,36 @@
+.body {
+	width: 1000px;
+	background-color: #eceff1;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #b0bec5;
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+textarea {
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	height: 600px;
+}
+
+label {
+	display: block;
+	margin: 10px 0;
+}
+
+button{
+	background-color: #2196F3;
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.create-message{
+	margin-top: 10px;
+}

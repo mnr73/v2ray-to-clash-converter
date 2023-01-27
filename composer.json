@@ -1,0 +1,19 @@
+{
+    "name": "mnr73/proxy-convertor",
+    "description": "help to convert proxy to each other",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "milad nazari"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}

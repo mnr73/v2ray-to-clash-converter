@@ -1,0 +1,6 @@
+;for forcerule.yml
+🔰Proxy`select`.*`[]🔄AUTO`[]DIRECT`.*
+🔄AUTO`url-test`.*`http://www.gstatic.com/generate_204`300
+⬆️inside`select`[]DIRECT`[]🔰Proxy
+🚫Block`select`[]REJECT`[]🔰Proxy`[]DIRECT
+🐳Final`select`[]🔰Proxy`[]DIRECT

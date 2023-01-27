@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  php:
+    build: './dockerFiles/php'
+    image: 'proxy-convertor-php'
+    volumes:
+      - '.:/var/www/html'
+    ports:
+      - 80:80
+  
+  composer:
+    build: './dockerFiles/composer'
+    image: 'proxy-convertor-composer'
+    working_dir: /app
+    volumes:
+      - '.:/app'
+
+  convertor:
+    image: tindy2013/subconverter
+    ports:
+      - 25500:25500
+    volumes:
+      - './base:/base'

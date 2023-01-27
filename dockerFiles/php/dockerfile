@@ -1,0 +1,20 @@
+FROM php:8.2-apache
+
+ENV TZ=UTC
+# in some case you shuld change user id (1000) 
+ENV WWWGROUP 1000
+ENV WWWUSER 1000
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+ENV USERNAME www-data
+
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
+
+RUN usermod -u $WWWUSER $USERNAME
+RUN groupmod -g $WWWGROUP $USERNAME
+
+RUN a2enmod rewrite
+
+USER www-data:www-data
+
+# ENTRYPOINT ["start-container"]

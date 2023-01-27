@@ -1,0 +1,15 @@
+FROM composer:lts
+
+ENV GID 1000
+ENV UID 1000
+ENV USERNAME mnr
+
+COPY start-container /usr/local/bin/start-container
+RUN chmod +x /usr/local/bin/start-container
+
+RUN addgroup -S $USERNAME -g $GID
+RUN adduser -S $USERNAME -G $USERNAME -u $UID
+
+USER 1000:1000
+
+ENTRYPOINT ["start-container"]
