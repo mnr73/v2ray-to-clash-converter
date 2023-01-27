@@ -48,7 +48,12 @@ class Convertor
 		]);
 
 		$target = $result->getBody();
-
+		if(!is_dir(dirname(__DIR__, 2) . "/dest")){
+			mkdir(
+				dirname(__DIR__, 2) . "/dest",
+				0755
+			);
+		}
 		$myfile = fopen(dirname(__DIR__, 2) . "/dest/config.yaml", "w") or die("Unable to open file!");
 		fwrite($myfile, $target);
 		fclose($myfile);
