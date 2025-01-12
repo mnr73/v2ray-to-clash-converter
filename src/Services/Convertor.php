@@ -16,7 +16,7 @@ class Convertor
 
 		$this->target = $target;
 		$this->config = $config;
-		preg_match_all('#\b[a-z]+://[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|/))#', $string, $match);
+		preg_match_all('/\b[a-z0-9]+:\/\/[^,\s()<>]+(?:\([\w\d]+\)|([^,[:punct:]\s]|\/))/i', $string, $match);
 
 		$this->links = $match[0];
 	}
